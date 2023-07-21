@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "My Autofill Extension",
+    "description": "This extension improves autofill using AI.",
+    "version": "1.0",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+      "default_popup": "options/options.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "options_page": "options/options.html"
+  }
+  
